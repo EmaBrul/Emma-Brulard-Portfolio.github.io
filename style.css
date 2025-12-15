@@ -1,0 +1,1043 @@
+@font-face {
+  font-family: "Bebas Neue";
+  src: url("BebasNeue-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: 'Source Sans 3', sans-serif;
+  background-color: #000; 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+header {
+  background-color: #ffb6d4;
+  width: 100%;
+  height: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+#menu {
+  max-width: 1024px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-bottom: 15px;
+  box-sizing: border-box;
+}
+#menu-left a,
+.footer-right a {
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Bebas Neue", sans-serif;
+  margin-right: 25px;
+  font-size: 24px;
+  letter-spacing: 1px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+#menu-left a:last-child {
+  margin-right: 0;
+}
+#menu-left a:hover,
+.footer-right a:hover {
+  color: #ff85b9;
+  transform: scale(1.05);
+}
+#menu-right img {
+  height: 110px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+#menu-right video#banner-video {
+  height: 90px;        /* hauteur identique au logo desktop */
+  width: auto;
+  object-fit: contain;   /* pour garder les proportions */
+  display: block;
+}
+#about {
+  background-color: white;
+  width: 100%;
+  padding: 60px 0;
+  display: flex;
+  justify-content: center;
+}
+.about-container {
+  width: 100%;
+  max-width: 1024px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.about-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.about-left h1 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 105px;
+  color: #000;
+  line-height: 1.1;
+  margin: 0 0 10px 0;
+}
+.about-left p {
+  font-size: 19px;
+  line-height: 1.6;
+  color: #000;
+  margin: 0;
+  max-width: 100%;
+}
+.about-right {
+  flex-shrink: 0;
+  display: flex;
+  align-items: flex-end;
+}
+.about-right img {
+  height: 380px;
+  width: auto;
+  object-fit: cover;
+}
+#skills {
+  width: 100%;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  padding: 60px 0;
+}
+.skills-container {
+  width: 100%;
+  max-width: 1024px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.skills-title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 110px;
+  color: #ffb6d4;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  margin: 0;
+}
+.skills-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.skills-image img {
+  height: 200px;
+  width: auto;
+  object-fit: contain;
+}
+#projects {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  padding: 60px 0;
+}
+.projects-container {
+  width: 100%;
+  max-width: 1024px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.projects-title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 100px;
+  color: #000;
+  text-align: right;
+  margin: 0 0 20px 0;
+}
+.projects-gallery {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.projects-gallery .block {
+  display: flex;
+  gap: 20px;
+  flex: 1;
+  height: 400px;
+}
+.projects-gallery .block .large {
+  flex: 2;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.projects-gallery .block .stack {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+}
+.projects-gallery .block .stack img.small {
+  width: 100%;
+  height: calc((100% - 20px)/2);
+  object-fit: cover;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.projects-gallery img:hover {
+  transform: scale(1.03);
+}
+@media screen and (min-width: 1232px) {
+  #dark-toggle {
+    position: absolute;   /* reste visible même quand tu scrolles */
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    background: transparent;
+    color: #000;
+    border: none;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 18px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+#dark-toggle:hover {
+    color: #f795bc;
+  }
+}
+#contacts {
+  width: 100%;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  padding: 60px 0;
+}
+.contacts-container {
+  width: 100%;
+  max-width: 1024px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  align-items: stretch;
+}
+.contacts-left {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+.simple-form {
+  background: transparent;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  height: 100%;
+}
+.form-title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 24px;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  flex-grow: 1;
+}
+.contact-form input,
+.contact-form textarea {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 16px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  padding: 10px 0;
+  background: transparent;
+  color: #fff;
+}
+
+.contact-form textarea {
+  flex-grow: 1;
+}
+
+.contact-form button {
+  background-color: #fff;
+  color: #000;
+  border: none;
+  padding: 12px 20px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #ccc;
+}
+
+.contacts-title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 95px;
+  color: #ffb6d4;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  flex-shrink: 0;
+}
+/* ===== FOOTER (DESKTOP) ===== */
+footer {
+  width: 100%;
+  background-color: #ffb6d4;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-container {
+  width: 100%;
+  max-width: 1024px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* aligne les éléments en haut */
+  padding: 10px 0; /* petit padding pour espace autour */
+  padding-top: 30px;
+}
+
+/* Logo à gauche */
+.footer-left {
+  order: 0;
+}
+
+.footer-logo {
+  height: 90px;
+  width: auto;
+  display: block;
+}
+
+/* Barre de liens à droite */
+.footer-right {
+  order: 1;
+  display: flex;
+  gap: 25px;
+  align-items: flex-start; /* aligne la barre en haut du logo */
+}
+
+.footer-right a {
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 24px;
+  letter-spacing: 1px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-right a:hover {
+  color: #ff85b9;
+  transform: scale(1.05);
+}
+
+
+/* ====================================== */
+/*               DARK MODE                */
+/* ====================================== */
+#dark-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  color: #000;
+  border: none;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 1000;
+  transition: color 0.3s ease;
+}
+
+#dark-toggle:hover {
+  color: #f795bc;
+}
+
+body.dark-mode {
+  background-color: #000;
+}
+
+body.dark-mode #about {
+  background-color: #000;
+}
+
+body.dark-mode .about-left h1 {
+  color: #f795bc;
+}
+
+body.dark-mode .about-left p {
+  color: #fff;
+}
+
+body.dark-mode #skills {
+  background-color: #515151;
+}
+
+body.dark-mode .skills-title {
+  color: #000;
+}
+
+body.dark-mode .skills-image img {
+  content: url("skills/LOGO dark.svg");
+}
+
+body.dark-mode #projects {
+  background-color: #000;
+}
+
+body.dark-mode .projects-title {
+  color: #f795bc;
+}
+
+body.dark-mode #contacts {
+  background-color: #515151;
+}
+
+body.dark-mode .contacts-title {
+  color: #000;
+}
+
+body.dark-mode .simple-form {
+  background: transparent;
+}
+
+body.dark-mode .form-title {
+  color: #000;
+}
+
+body.dark-mode .contact-form input,
+body.dark-mode .contact-form textarea {
+  border-bottom: 2px solid #000;
+  color: #000;
+  background: transparent;
+  padding: 10px 0;
+  font-size: 16px;
+}
+
+body.dark-mode .contact-form button {
+  background-color: #000;
+  color: #888;
+  border: none;
+  padding: 12px 20px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 16px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode .contact-form button:hover {
+  background-color: #333;
+  color: #fff;
+}
+/* ===== LIGHTBOX ===== */
+#lightbox {
+  display: none; /* caché par défaut */
+  position: fixed; /* overlay sur toute la page */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+  z-index: 10000; /* au-dessus de tout */
+  cursor: pointer;
+}
+
+#lightbox-img {
+  max-width: 90%; /* s’adapte à l’écran */
+  max-height: 90%;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+
+/* ====================================== */
+/* VERSION TABLETTE (≤768px) */
+@media screen and (max-width: 768px) {
+
+  /* Conteneur général */
+  .container,
+  .about-container,
+  .skills-container,
+  .projects-container,
+  .contacts-container,
+  .footer-container {
+    max-width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+  }
+@media screen and (max-width: 768px) {
+
+  /* ===== HEADER VERSION TABLETTE ===== */
+/* ===== HEADER VERSION TABLETTE ===== */
+#menu {
+  flex-direction: column;         /* empile le logo et la barre */
+  justify-content: flex-start;    
+  align-items: center;            /* centre horizontalement */
+  width: 100%;
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 0;
+  gap: 15px;                      /* espace entre logo et barre */
+}
+
+#menu-right {
+  order: 0;                       /* logo en haut */
+  display: flex;
+  justify-content: center;        /* centre le logo */
+  width: 100%;
+}
+
+#menu-right img#logo,
+#menu-right video#banner-video {
+  height: 90px;                   /* même taille que footer tablette */
+  width: auto;
+  display: block;
+}
+
+#menu-left {
+  order: 1;                       /* barre sous le logo */
+  display: flex;
+  justify-content: space-around;  /* équilibre les liens sur toute la largeur */
+  width: 100%;                    /* prend toute la largeur de 768px */
+  max-width: 768px;               /* limite à 768px */
+  gap: 15px;                      /* espace entre liens */
+}
+
+#menu-left a {
+  font-size: 20px;                /* taille adaptée tablette */
+  text-align: center;
+}
+
+/* Garder le bouton Dark Mode positionné comme avant */
+#dark-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+/* ⭐ FIX HEADER TROP PETIT — SANS TOUCHER À LA NAV ⭐ */
+header {
+  height: auto;
+  min-height: 160px;
+}
+
+
+
+  /* About */
+  #about { padding: 40px 0; }
+  .about-left { flex: 1.5; min-width: 50%; }
+  .about-left h1 { font-size: 70px; margin: 0 0 5px 0; line-height: 1; }
+  .about-left p { font-size: 16px; line-height: 1.5; }
+  .about-right img { height: 280px; }
+
+  /* Skills */
+  .skills-container { flex-direction: row; justify-content: space-between; gap: 05px; height: 340px; }
+  .skills-title { font-size: 80px; }
+  /* ===== SKILLS — VERSION TABLETTE ===== */
+@media screen and (max-width: 768px) {
+
+  .skills-image img {
+    height: 220px;
+    width: auto;
+    object-fit: contain;
+    content: url("skills/LOGO tablette light.svg");  /* <-- le bon fichier tablette */
+  }
+}
+/* ===== SKILLS — VERSION TABLETTE ===== */
+@media screen and (max-width: 768px) {
+
+  /* Réduction des marges verticales */
+  #skills {
+    padding: 30px 0;  /* moins d'espace haut/bas */
+  }
+
+  /* Conteneur centré avec marges sur les côtés */
+  .skills-container {
+    width: 100%;
+    max-width: 1024px; /* limite la largeur comme les autres sections */
+    margin: 0 auto;    /* centre le contenu */
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;         /* espace entre titre et image */
+    height: auto;      /* adaptatif au contenu */
+    padding: 0 20px;   /* marge horizontale */
+    align-items: center;
+  }
+
+  /* Titre vertical */
+  .skills-title {
+    font-size: 80px;
+  }
+
+  /* Image logo — version light tablette */
+  .skills-image img {
+    height: 250px;
+    width: auto;
+    object-fit: contain;
+    content: url("skills/LOGO tablette light.svg");
+  }
+
+  /* Dark mode tablette */
+  body.dark-mode .skills-image img {
+    content: url("skills/LOGO tablette dark.svg");
+  }
+}
+/* ===== PROJECTS TABLETTE ===== */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  #projects{
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .projects-gallery {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    width: 100%;
+    padding: 5 10px;
+    box-sizing: border-box;
+  }
+
+  /* Forcer toutes les images à la même taille */
+  .projects-gallery img,
+  .projects-gallery img.large,
+  .projects-gallery img.small {
+    width: 100% !important;
+    height: 340px !important; /* même hauteur pour toutes */
+    object-fit: cover !important;
+    display: block;
+    border-radius: 6px;
+  }
+
+  /* Supprimer les effets de flex sur block/stack */
+  .projects-gallery .block,
+  .projects-gallery .block .stack {
+    display: contents !important;
+  }
+
+  /* Ajuster le titre */
+  .projects-title {
+    font-size: 60px;
+    text-align: right;
+    margin-bottom: 0px;
+  }
+}
+
+
+/* Contacts */
+#contacts { padding: 40px 0; }
+.contacts-container { flex-direction: row; justify-content: space-between; gap: 8px; align-items: stretch; }
+.contacts-left { flex: 0 0 55%; }
+.contacts-title { font-size: 70px; flex: 1; writing-mode: vertical-rl; transform: rotate(180deg); display: flex; align-items: center; justify-content: flex-end; }
+
+@media screen and (max-width: 768px) {
+
+  .contacts-title {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  /* ===== CONTACTS — TABLETTE (marges augmentées) ===== */
+  #contacts {
+    padding: 40px 0;        /* ← modification effective */
+  }
+
+  .contacts-container {
+    gap: 25px;               /* ← plus d’espace interne */
+  }
+}
+
+
+/* ===== FOOTER TABLETTE ===== */
+@media screen and (max-width: 768px) {
+  footer {
+    height: auto;
+    padding: 15px 20px; /* marge au-dessus et en dessous */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-container {
+    flex-direction: column;       /* empilement vertical */
+    justify-content: center;
+    align-items: center;           /* centre horizontalement */
+    gap: 10px;                     /* espace entre barre et logo */
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+  }
+
+  /* Barre de liens centrée et occupant toute la largeur (768px) */
+  .footer-right {
+    order: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; /* équilibre les liens comme dans le header */
+    width: 100%;                  /* prend toute la largeur */
+    max-width: 768px;             /* limite à la taille tablette */
+    flex-wrap: nowrap;
+  }
+
+  .footer-right a {
+    font-family: "Bebas Neue", sans-serif; /* identique header */
+    text-transform: uppercase;
+    font-size: 20px;                      /* même que header */
+    letter-spacing: 1px;
+    color: #000;                          /* ou rose si dark mode */
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+    text-align: center;
+  }
+
+  .footer-right a:hover {
+    color: #ff85b9; /* survol rose */
+    transform: scale(1.05);
+  }
+
+  /* Logo centré en dessous, même taille que header */
+  .footer-left {
+    order: 1;
+    display: block;
+    width: auto;
+    margin: 0 auto;
+  }
+
+  .footer-logo {
+    height: 80px; /* identique header */
+    width: auto;
+    display: block;
+  }
+}
+/* ===== HEADER — VERSION TÉLÉPHONE ===== */
+@media (max-width: 480px) {
+
+  header {
+    display: flex;
+    justify-content: center; /* centre le logo */
+    align-items: center;
+    padding: 0px 10px;
+    position: relative; /* nécessaire pour positionner le bouton */
+  }
+
+  /* Logo centré */
+  #menu-right img#logo {
+    display: block;
+    margin: 0 auto;
+    height: 90px; /* taille adaptée au téléphone */
+    width: auto;
+  }
+
+  /* Cacher la barre de navigation */
+  #menu-left {
+    display: none;
+  }
+
+  /* Bouton Dark Mode dans le header */
+  #dark-toggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    color: #000;
+    border: none;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: color 0.3s ease;
+  }
+
+  #dark-toggle:hover {
+    color: #f795bc;
+  }
+}
+
+/* ===== ABOUT — VERSION TÉLÉPHONE AVEC TITRE CENTRÉ VERTICALEMENT ===== */
+@media (max-width: 480px) {
+  #about {
+    display: flex;
+    justify-content: center;  /* centre horizontalement */
+    align-items: center;      /* centre verticalement */
+    padding: 20px 15px;       /* réduit espace haut/bas */
+    min-height: 300px;        /* ajustable selon besoin */
+  }
+
+  #about .about-container {
+    display: flex;
+    flex-direction: column;   /* empile titre et texte */
+    justify-content: center;  /* centre verticalement contenu */
+    width: 100%;
+  }
+
+  #about .about-left h1 {
+    display: block;           
+    font-size: 60px;          
+    margin-bottom: 10px;      
+    text-align: left;         /* titre aligné à gauche */
+  }
+
+  #about .about-right {
+    display: none;            /* photo toujours cachée */
+  }
+
+  #about .about-left p {
+    font-size: 16px;
+    line-height: 1.5;
+    width: 100%;
+    margin: 0;
+    text-align: left;         /* texte aligné à gauche */
+  }
+}
+/* ===== SKILLS — VERSION TÉLÉPHONE (comme About Me) ===== */
+@media (max-width: 480px) {
+
+  .skills-container {
+    flex-direction: column;      /* titre en haut, logo en dessous */
+    justify-content: center;     /* centre verticalement la section */
+    align-items: center;         /* centre horizontalement le logo */
+    height: auto;                /* laisse le contenu définir la hauteur */
+    padding: px;               /* optionnel : espace autour */
+  }
+
+  .skills-title {
+    writing-mode: horizontal-tb; /* titre horizontal */
+    transform: none;             /* pas de rotation */
+    text-align: left;            /* aligné à gauche */
+    font-size: 60px;             /* taille adaptée téléphone */
+    width: 90%;
+    margin-bottom: 20px;         /* espace avec le logo */
+  }
+
+  .skills-image {
+    display: flex;
+    justify-content: center;     /* centre horizontalement les logos */
+    width: 100%;
+  }
+
+  .skills-image img {
+    height: 200px;               /* plus grand que la version précédente */
+    width: auto;
+    object-fit: contain;
+  }
+}
+/* ===== PROJECTS — MOBILE (≤480px) ===== */
+@media (max-width: 480px) {
+
+  /* Conteneur galerie */
+  .projects-gallery {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 15px;
+    width: 100%;
+    padding: 0 5px;
+    align-items: center; /* images centrées */
+  }
+
+  /* Titre */
+  .projects-title {
+    font-size: 60px;
+    text-align: right;
+    margin-bottom: 5px;
+    width: 100%;
+  }
+
+  /* Chaque block devient une colonne verticale */
+  .projects-gallery .block {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px;
+    width: 100%;
+    max-width: 200px;
+    margin-bottom: 10px;
+    align-items: center; /* images centrées */
+  }
+
+  /* Images dans le block "magazine" et "sncb" */
+  .projects-gallery .block.magazine img,
+  .projects-gallery .block.sncb img {
+    width: 100% !important;
+    height: 160px !important; /* hauteur uniforme pour ce bloc */
+    object-fit: cover !important;
+    border-radius: 6px;
+  }
+
+  /* Images dans les autres blocks */
+  .projects-gallery .block:not(.magazine):not(.sncb) img {
+    width: 200px !important;
+    height: 230px !important; /* hauteur uniforme pour ces blocks */
+    object-fit: cover !important;
+    border-radius: 6px;
+  }
+
+  /* Stack des petites images */
+  .projects-gallery .block .stack {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 5px;
+    align-items: center; /* centrage images petites */
+  }
+}
+
+
+/* ===== CONTACTS — VERSION TÉLÉPHONE ===== */
+@media (max-width: 480px) {
+
+  /* Cacher le titre "CONTACTS" */
+  .contacts-title {
+    display: none;
+    contact-form button {
+      padding: 16px 24px;
+      font-size: 18px;
+    }
+  }
+
+  /* Conteneur contacts centré */
+  .contacts-container {
+    flex-direction: column;
+    justify-content: center;  /* centre verticalement si possible */
+    align-items: center;      /* centre horizontalement */
+    gap: 20px;
+    padding: 20px 10px;
+  }
+
+  /* Formulaire centré */
+  .contacts-left {
+    width: 100%;
+    max-width: 320px; /* largeur adaptée au téléphone */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .simple-form {
+    width: 100%;
+  }
+}
+/* ===== FOOTER — VERSION TÉLÉPHONE ===== */
+@media (max-width: 480px) {
+
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 10px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+  }
+
+  /* Cacher la barre de navigation */
+  .footer-right {
+    display: none;
+  }
+
+  /* Centrer le logo */
+  .footer-left {
+    order: 0;
+    display: block;
+    width: auto;
+    margin: 0 auto;
+  }
+
+  .footer-logo {
+    height: 80px; /* taille adaptée au téléphone */
+    width: auto;
+    display: block;
+  }
+}
+/* ===== LIGHTBOX ===== */
+#lightbox {
+  display: none; /* caché par défaut */
+  position: fixed; /* overlay sur toute la page */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+  z-index: 10000; /* au-dessus de tout */
+  cursor: pointer;
+}
+
+#lightbox-img {
+  max-width: 90%; /* s’adapte à l’écran */
+  max-height: 90%;
+  object-fit: contain;
+  border-radius: 8px;
+}
+@media screen and (max-width: 480px) {
+  .projects-gallery {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+}
+/* ===== BANNIÈRE ANIMÉE (LOGO) ===== */
+#logo-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Vidéo */
+#banner-video {
+  height: 90px;
+  width: auto;
+  background: transparent;
+  object-fit: contain;
+  display: block;
+}
+
+/* Logo image */
+#logo {
+  height: 110px;
+  width: auto;
+  display: block;
+}
+
+/* TABLETTE */
+@media (max-width: 768px) {
+  #banner-video,
+  #logo {
+    height: 70px;
+  }
+}
+
+/* TÉLÉPHONE */
+@media (max-width: 480px) {
+  #banner-video,
+  #logo {
+    height: 70px;
+  }
+}
+
+
