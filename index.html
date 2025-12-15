@@ -1,0 +1,186 @@
+<!DOCTYPE html> 
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio - Emma Brulard</title>
+
+  <!-- Reset CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css" rel="stylesheet">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="container">
+
+    <!-- Header -->
+    <header>
+      <nav id="menu">
+        <div id="menu-left">
+          <a href="#about">about me</a>
+          <a href="#skills">skills</a>
+          <a href="#projects">projects</a>
+          <a href="#contacts">contacts</a>
+        </div>
+        
+        <div id="menu-right">
+       <a href="#" id="logo-wrapper">
+
+  <!-- Vidéo animée -->
+  <video
+    id="banner-video"
+    autoplay
+    muted
+    playsinline
+  >
+    <source src="Vidéo/Bannière1.webm" type="video/webm">
+  </video>
+
+  <!-- Logo fixe (caché au départ) -->
+  <img
+    src="Fichier 1.svg"
+    alt="logo du site"
+    id="logo"
+    style="display:none;"
+  >
+
+</a>
+
+          <!-- Bouton Dark Mode -->
+          <button id="dark-toggle">Dark mode</button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+      <div class="about-container">
+        <div class="about-left">
+          <h1>ABOUT ME</h1>
+          <p>
+            Je m’appelle Emma, j’ai 23 ans et j’étudie le graphisme.<br> <br\>
+            Toujours souriante et pleine d’énergie, je transforme mes idées en créations visuelles qui racontent une histoire. Curieuse et inventive, j’aime explorer de nouvelles techniques et expérimenter différents styles pour donner vie à des projets originaux. J’apprécie particulièrement le travail en équipe, où les échanges et la créativité collective font naître des idées encore plus fortes. Motivée et impliquée, je m’investis pleinement pour que chaque projet ait du caractère, de l’impact et une véritable identité.
+          </p>
+        </div>
+        <div class="about-right">
+          <img src="aboutme/photo moi.png" alt="Photo d’Emma">
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+      <div class="skills-container">
+        <h2 class="skills-title">SKILLS</h2>
+        <div class="skills-image">
+          <img src="skills/LOGO.svg" alt="Logos des logiciels Adobe">
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+      <div class="projects-container">
+        <h2 class="projects-title">PROJECTS</h2>
+
+        <div class="projects-gallery">
+          <!-- Bloc 1 -->
+          <div class="block">
+            <img src="projects/magasine.png" alt="Magasine" class="large">
+            <div class="stack">
+              <img src="projects/tools make shapes.png" alt="Tools Make Shapes" class="small">
+              <img src="projects/hamza.jpg" alt="Hamza" class="small">
+            </div>
+          </div>
+
+          <!-- Bloc 2 -->
+          <div class="block">
+            <img src="projects/affiche SNCB.png" alt="Affiche SNCB" class="large">
+            <div class="stack">
+              <img src="projects/carte de visite.png" alt="Carte de visite" class="small">
+              <img src="projects/woods.png" alt="Woods" class="small">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Contacts Section -->
+    <section id="contacts">
+      <div class="contacts-container">
+        <div class="contacts-left">
+          <div class="simple-form">
+            <h3 class="form-title">Contactez-moi</h3>
+            <form class="contact-form">
+              <input type="text" id="name" name="name" placeholder="Votre nom" required>
+              <input type="email" id="email" name="email" placeholder="Votre email" required>
+              <textarea id="message" name="message" placeholder="Votre message" required></textarea>
+              <button type="submit">Envoyer</button>
+            </form>
+          </div>
+        </div>
+        <h2 class="contacts-title">CONTACTS</h2>
+      </div>
+    </section>
+
+    <!-- Footer -->
+   <!-- Footer -->
+<footer>
+  <div class="footer-container">
+    <!-- Logo en premier pour desktop (gauche) -->
+    <div class="footer-left">
+      <img src="Fichier 1.svg" alt="Logo Ema Studio" class="footer-logo">
+    </div>
+    <!-- Liens en second pour desktop (droite) -->
+    <div class="footer-right">
+      <a href="#about">about me</a>
+      <a href="#skills">skills</a>
+      <a href="#projects">projects</a>
+      <a href="#contacts">contacts</a>
+    </div>
+  </div>
+</footer>
+
+  </div>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox">
+    <img id="lightbox-img" src="#" alt="">
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    // Lightbox galerie
+    const galleryImages = document.querySelectorAll(".projects-gallery img");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+
+    galleryImages.forEach(img => {
+      img.addEventListener("click", () => {
+        lightboxImg.src = img.src;
+        lightbox.style.display = "flex";
+      });
+    });
+
+    lightbox.addEventListener("click", () => {
+      lightbox.style.display = "none";
+    });
+
+    // DARK MODE TOGGLE
+    const btn = document.getElementById("dark-toggle");
+    btn.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+      btn.textContent = document.body.classList.contains("dark-mode") ? "Light mode" : "Dark mode";
+    });
+  </script>
+  
+
+</body>
+</html>
+
